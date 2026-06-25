@@ -1,0 +1,357 @@
+/* ============================================================
+   FILOSOFI PHOTOBOOTH & VIDEOBOOTH
+   Palet : Ink #0E0E0E · Putih #FFFFFF · Abu #9A9A9A · Flash #FFD23F
+   Tipe  : Archivo Black (display) · Archivo (body) · Space Mono (label)
+   ============================================================ */
+
+:root {
+    --fp-ink: #0e0e0e;
+    --fp-ink-soft: #181818;
+    --fp-white: #ffffff;
+    --fp-gray: #9a9a9a;
+    --fp-flash: #ffd23f;
+}
+
+body {
+    font-family: 'Archivo', system-ui, sans-serif;
+    color: var(--fp-ink);
+    background: var(--fp-white);
+}
+
+/* ---------- Tipografi ---------- */
+.fp-display {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: var(--fp-white);
+}
+
+.fp-display-sm {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 0.95;
+}
+
+.fp-heading {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.05;
+}
+
+.fp-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--fp-white);
+}
+
+.fp-mono {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.04em;
+}
+
+.fp-timestamp { color: var(--fp-flash); font-size: 0.8rem; }
+.fp-timestamp-dark { color: var(--fp-ink); font-size: 0.8rem; opacity: 0.6; }
+
+.fp-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--fp-white);
+    text-transform: uppercase;
+}
+
+/* ---------- Navbar ---------- */
+.fp-navbar {
+    background: rgba(14, 14, 14, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-block: 0.75rem;
+}
+
+.fp-brand-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: var(--fp-white);
+}
+
+.fp-navbar .nav-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--fp-gray);
+}
+
+.fp-navbar .nav-link:hover,
+.fp-navbar .nav-link.active { color: var(--fp-white); }
+
+/* ---------- Tombol ---------- */
+.btn { border-radius: 0; }
+
+.btn-flash {
+    background: var(--fp-flash);
+    color: var(--fp-ink);
+    font-weight: 600;
+    border: 1px solid var(--fp-flash);
+}
+
+.btn-flash:hover {
+    background: var(--fp-white);
+    border-color: var(--fp-white);
+    color: var(--fp-ink);
+}
+
+.btn-outline-light:hover { color: var(--fp-ink); }
+
+/* ---------- Hero ---------- */
+.fp-hero {
+    background: var(--fp-ink);
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* tekstur grain halus seperti kertas cetak */
+.fp-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
+    background-size: 4px 4px;
+}
+
+/* ---------- Strip foto (signature) ---------- */
+.fp-strip {
+    background: var(--fp-white);
+    padding: 14px 14px 10px;
+    width: min(240px, 70vw);
+    box-shadow: 16px 16px 0 rgba(255, 210, 63, 0.85);
+    transform: rotate(3deg);
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+    .fp-strip {
+        width: 90px;
+        padding: 7px 7px 5px;
+        box-shadow: 6px 6px 0 rgba(255, 210, 63, 0.85);
+    }
+    .fp-strip-frame { margin-bottom: 5px; }
+    .fp-count { font-size: 1rem; }
+    .fp-strip-caption { font-size: 0.5rem; }
+}
+
+@media (max-width: 575.98px) {
+    .fp-display {
+        font-size: clamp(1.4rem, 7vw, 2rem);
+        line-height: 1.05;
+    }
+}
+
+.fp-strip-frame {
+    background: var(--fp-ink-soft);
+    aspect-ratio: 4 / 3;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fp-count {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.5rem;
+    color: var(--fp-white);
+    opacity: 0.85;
+}
+
+.fp-strip-flash {
+    background: var(--fp-flash);
+    animation: fp-flash-blink 4s ease-in-out infinite;
+}
+
+@keyframes fp-flash-blink {
+    0%, 88%, 100% { filter: brightness(1); }
+    92%, 96% { filter: brightness(1.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fp-strip-flash { animation: none; }
+}
+
+.fp-strip-caption {
+    font-size: 0.7rem;
+    color: var(--fp-ink);
+    text-align: center;
+}
+
+/* ---------- Section & kartu ---------- */
+.fp-section-dark { background: var(--fp-ink); }
+
+.fp-page-head {
+    background: var(--fp-ink);
+    padding: 9rem 0 4rem;
+}
+
+.fp-card {
+    border: 2px solid var(--fp-ink);
+    background: var(--fp-white);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fp-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0 var(--fp-ink);
+}
+
+.fp-card-dark {
+    background: var(--fp-ink-soft);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.fp-price-card {
+    background: var(--fp-ink-soft);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--fp-gray);
+}
+
+.fp-price-card h2, .fp-price-card h3 { color: var(--fp-white); }
+
+.fp-price-populer {
+    border: 2px solid var(--fp-flash);
+}
+
+.fp-price {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.75rem;
+    color: var(--fp-white);
+}
+
+.fp-badge {
+    background: var(--fp-flash);
+    color: var(--fp-ink);
+    font-family: 'Space Mono', monospace;
+    border-radius: 0;
+}
+
+/* ---------- Galeri ---------- */
+.fp-galeri-frame {
+    background: var(--fp-ink);
+    aspect-ratio: 2 / 3;
+    border: 8px solid var(--fp-white);
+    outline: 2px solid var(--fp-ink);
+}
+
+.fp-galeri-item { transition: transform 0.15s ease; }
+.fp-galeri-item:hover { transform: rotate(-1.5deg); }
+
+/* ---------- Form ---------- */
+.fp-form .form-control,
+.fp-form .form-select {
+    border-radius: 0;
+    border: 2px solid var(--fp-ink);
+    padding: 0.7rem 0.9rem;
+}
+
+.fp-form .form-control:focus,
+.fp-form .form-select:focus {
+    box-shadow: 4px 4px 0 var(--fp-flash);
+    border-color: var(--fp-ink);
+}
+
+/* ---------- Footer ---------- */
+.fp-footer {
+    background: var(--fp-ink);
+    color: var(--fp-white);
+}
+
+.fp-footer-link {
+    color: var(--fp-gray);
+    text-decoration: none;
+}
+
+.fp-footer-link:hover { color: var(--fp-flash); }
+
+/* ---------- Client logos marquee ---------- */
+.fp-clients-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.fp-clients-wrap::before,
+.fp-clients-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.fp-clients-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, var(--fp-white), transparent);
+}
+
+.fp-clients-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, var(--fp-white), transparent);
+}
+
+.fp-clients-track {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    width: max-content;
+    animation: fp-marquee 35s linear infinite;
+}
+
+.fp-clients-track img {
+    height: 44px;
+    width: auto;
+    flex-shrink: 0;
+    filter: grayscale(1) opacity(0.55);
+    transition: filter 0.2s ease;
+}
+
+.fp-clients-track img:hover {
+    filter: grayscale(0) opacity(1);
+}
+
+@keyframes fp-marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fp-clients-track {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding-inline: 1rem;
+    }
+}
+
+/* ---------- Aksesibilitas ---------- */
+:focus-visible {
+    outline: 3px solid var(--fp-flash);
+    outline-offset: 2px;
+}
+
+/* ---------- Penyesuaian (rapihan) ---------- */
+/* Pengganti inline style pada section klien */
+.fp-clients-section {
+    border-top: 1px solid rgba(14, 14, 14, 0.12);
+}
+
+/* Logo besar di section CTA — responsif, tidak overflow di HP */
+.fp-cta-logo {
+    height: clamp(120px, 22vw, 230px);
+    width: auto;
+}

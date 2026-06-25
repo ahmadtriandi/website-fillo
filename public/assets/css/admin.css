@@ -1,0 +1,75 @@
+/* Halaman admin — Filosofi Photobooth */
+
+.fp-admin-body {
+    background: #f4f4f2;
+    min-height: 100vh;
+}
+
+.fp-admin-card {
+    background: var(--fp-white);
+    border: 2px solid var(--fp-ink);
+}
+
+.fp-stat {
+    border: 2px solid var(--fp-ink);
+    background: var(--fp-white);
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    color: var(--fp-ink);
+    display: block;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.fp-stat:hover {
+    color: var(--fp-ink);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--fp-ink);
+}
+
+.fp-stat.aktif {
+    background: var(--fp-ink);
+    color: var(--fp-white);
+}
+
+.fp-stat .angka {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.fp-stat .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.fp-table th {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.fp-table td { vertical-align: middle; }
+
+.fp-status {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0;
+}
+
+.fp-status-baru      { background: var(--fp-flash); color: var(--fp-ink); }
+.fp-status-dihubungi { background: #cfe2ff; color: #084298; }
+.fp-status-deal      { background: #d1e7dd; color: #0f5132; }
+.fp-status-batal     { background: #f8d7da; color: #842029; }
+
+.fp-login-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fp-ink);
+}
