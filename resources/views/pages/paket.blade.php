@@ -6,7 +6,7 @@
 <section class="fp-page-head">
     <div class="container">
         <p class="fp-mono fp-timestamp mb-2">[ PAKET & HARGA ]</p>
-        <h1 class="fp-display-sm text-white mb-0">HARGA JELAS.<br>TANPA BIAYA SILUMAN.</h1>
+        {{-- <h1 class="fp-display-sm text-white mb-0">HARGA JELAS.<br>TANPA BIAYA SILUMAN.</h1> --}}
     </div>
 </section>
 
@@ -21,7 +21,6 @@
                     @endif
                     <h2 class="h4 fw-bold">{{ $p['nama'] }}</h2>
                     <p class="fp-mono mb-1">{{ $p['durasi'] }}</p>
-                    <p class="fp-price mb-4">{{ $p['harga'] }}</p>
                     <ul class="list-unstyled d-grid gap-2 small mb-4">
                         @foreach($p['fitur'] as $f)
                             <li>— {{ $f }}</li>

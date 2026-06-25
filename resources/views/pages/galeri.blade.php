@@ -12,7 +12,7 @@
 
 <section class="py-5 bg-white">
     <div class="container py-lg-4">
-        <p class="text-muted small fp-mono mb-4">* Edit daftar foto di method galeriData() pada app/Http/Controllers/PageController.php — file foto ditaruh di public/assets/img/galeri/</p>
+        {{-- <p class="text-muted small fp-mono mb-4">* Edit daftar foto di method galeriData() pada app/Http/Controllers/PageController.php — file foto ditaruh di public/assets/img/galeri/</p> --}}
         <div class="row g-4">
             @foreach($galeri as $item)
             <div class="col-6 col-lg-4">

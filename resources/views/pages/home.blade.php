@@ -46,13 +46,13 @@
 <section class="py-5 bg-white">
     <div class="container py-lg-4">
         <p class="fp-mono fp-timestamp-dark mb-2">[ KENAPA FILOSOFI ]</p>
-        <h2 class="fp-heading mb-5">Bukan sekadar booth di pojok ruangan.</h2>
+        <h2 class="fp-heading mb-5">Bukan sekadar photobooth biasa.</h2>
         <div class="row gy-4">
             <div class="col-md-4">
                 <div class="fp-card h-100 p-4">
                     <p class="fp-mono small mb-2">CETAK &lt; 10 DETIK</p>
                     <h3 class="h5 fw-bold mb-2">Hasil instan</h3>
-                    <p class="text-muted small mb-0">Printer dye-sub profesional. Tamu pose, strip langsung keluar — tidak ada antrean menumpuk.</p>
+                    <p class="text-muted small mb-0">Printer dye-sub profesional. Tamu pose, foto langsung tercetak — tidak ada antrean menumpuk.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -64,9 +64,9 @@
             </div>
             <div class="col-md-4">
                 <div class="fp-card h-100 p-4">
-                    <p class="fp-mono small mb-2">FOTO + VIDEO</p>
-                    <h3 class="h5 fw-bold mb-2">Videobooth 180&deg;</h3>
-                    <p class="text-muted small mb-0">Boomerang dan slow motion siap dibagikan ke Instagram lewat QR code, langsung di lokasi.</p>
+                    <p class="fp-mono small mb-2">VIDEOBOOTH</p>
+                    <h3 class="h5 fw-bold mb-2">Videobooth 360&deg;</h3>
+                    <p class="text-muted small mb-0">Video 360&deg; siap dibagikan ke Instagram lewat QR code, langsung di lokasi.</p>
                 </div>
             </div>
         </div>
@@ -92,7 +92,6 @@
                     @endif
                     <h3 class="h4 fw-bold">{{ $p['nama'] }}</h3>
                     <p class="fp-mono mb-1">{{ $p['durasi'] }}</p>
-                    <p class="fp-price mb-4">{{ $p['harga'] }}</p>
                     <ul class="list-unstyled d-grid gap-2 small mb-4">
                         @foreach($p['fitur'] as $f)
                             <li>— {{ $f }}</li>
@@ -151,14 +150,14 @@
 </section>
 
 {{-- ============ GALERI RINGKAS ============ --}}
-<section class="py-5 bg-white fp-clients-section">
+<section class="py-5 bg-black fp-clients-section">
     <div class="container py-lg-4">
         <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3">
             <div>
-                <p class="fp-mono fp-timestamp-dark mb-2">[ GALERI ]</p>
-                <h2 class="fp-heading mb-0">Hasil dari acara sebelumnya.</h2>
+                <p class="fp-mono fp-timestamp-light text-white mb-2">[ GALERI ]</p>
+                <h2 class="fp-heading  text-white mb-0">Hasil dari acara sebelumnya.</h2>
             </div>
-            <a href="{{ route('galeri') }}" class="btn btn-outline-dark rounded-0">Lihat Semua Galeri</a>
+            <a href="{{ route('galeri') }}" class="btn btn-outline-light rounded-0">Lihat Semua Galeri</a>
         </div>
         <div class="row g-3">
             {{-- @foreach($galeri as $item) --}}

@@ -49,7 +49,7 @@
                             @filosofi_photobooth
                         </a>
                     </li>
-                    <li>Area layanan: Cikarang &amp; Jabodetabek</li>
+                    <li>Area layanan:Jabodetabek</li>
                 </ul>
             </div>
         </div>

@@ -106,8 +106,8 @@
                     </ol>
                     <p class="fp-label mb-3">Kontak langsung</p>
                     <ul class="list-unstyled small text-secondary d-grid gap-2 mb-0">
-                        <li>WhatsApp: 0812-3456-7890</li>
-                        <li>Email: halo@filosofiphotobooth.id</li>
+                        <li>WhatsApp: 0896-9088-8426</li>
+                        <li>Email: fphotobooth22@gmail.com</li>
                         <li>Instagram: @filosofiphotobooth</li>
                     </ul>
                 </div>
